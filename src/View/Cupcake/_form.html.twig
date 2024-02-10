@@ -20,9 +20,7 @@
         <select name="accessory" id="accessory">
             {# TODO Add accessories options here #}
             {% for accessory in accessories %}
-                <option value="{{ accessoryId.id }}">
-                {{ accessory.name }}</option> 
-                {{ dump(accessories) }}
+                <option value="{{ accessory.id }}">{{ accessory.name }}</option>
             {% endfor %}
         </select>
     </div>

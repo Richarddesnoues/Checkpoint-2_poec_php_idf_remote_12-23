@@ -62,7 +62,7 @@ class AccessoryController extends AbstractController
     {
         //TODO Add your code here to retrieve all accessories
         $accessoryManager = new accessoryManager();
-        $accessories = $accessoryManager->selectAll('name');
+        $accessories = $accessoryManager->selectAll();
         return $this->twig->render('Accessory/list.html.twig', ['accessories' => $accessories]);
     }
 }
