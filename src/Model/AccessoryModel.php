@@ -10,7 +10,7 @@ class AccessoryModel
 
     /**
      * Get the value of id
-     */ 
+     */
     public function getId()
     {
         return $this->id;
@@ -20,7 +20,7 @@ class AccessoryModel
      * Set the value of id
      *
      * @return  self
-     */ 
+     */
     public function setId($id)
     {
         $this->id = $id;
@@ -30,7 +30,7 @@ class AccessoryModel
 
     /**
      * Get the value of name
-     */ 
+     */
     public function getName()
     {
         return $this->name;
@@ -40,7 +40,7 @@ class AccessoryModel
      * Set the value of name
      *
      * @return  self
-     */ 
+     */
     public function setName($name)
     {
         $this->name = $name;
@@ -50,7 +50,7 @@ class AccessoryModel
 
     /**
      * Get the value of url
-     */ 
+     */
     public function getUrl()
     {
         return $this->url;
@@ -60,7 +60,7 @@ class AccessoryModel
      * Set the value of url
      *
      * @return  self
-     */ 
+     */
     public function setUrl($url)
     {
         $this->url = $url;

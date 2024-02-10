@@ -4,5 +4,10 @@
     <div class="main-container">
         <h1>My accessories</h1>
         {# TODO Display all accessories here #}
+        {% for accessory in accessories %}
+            <div class="accessory">
+                <h2>{{ accessory.name }}</h2>
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}
