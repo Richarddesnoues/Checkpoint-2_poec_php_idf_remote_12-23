@@ -1,5 +1,5 @@
 {% block content %} 
-    {% if errors %}
+    {% if errors > 0 %}
         <div class="alert alert-danger">
             <ul>
                 {% for error in errors %}

@@ -30,7 +30,7 @@ class CupcakeController extends AbstractController
             if (empty($errors)) {
                 (new CupcakeManager())->createCupcake($newCupcake);
                 var_dump($succes);
-                $succes = "Votre accéssoire a été créé";
+                $succes = "Votre cupcake a été créé";
                 header('Location:/cupcake/list');
             }
         }
@@ -59,6 +59,8 @@ class CupcakeController extends AbstractController
     public function list()
     {
         //TODO Retrieve all cupcakes
-        return $this->twig->render('Cupcake/list.html.twig');
+        $cupcakeManager = new CupcakeManager();
+        $cupcakes = $cupcakeManager->selectAll('name');
+        return $this->twig->render('Cupcake/list.html.twig', ['cupcakes' => $cupcakes]);
     }
 }

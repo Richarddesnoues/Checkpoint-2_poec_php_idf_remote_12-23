@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Model;
 
@@ -20,5 +20,11 @@ class CupcakeManager extends AbstractManager
         $statement->bindValue(':color2', $form['color2'], PDO::PARAM_STR);
         $statement->bindValue(':color3', $form['color3'], PDO::PARAM_STR);
         $statement->execute();
+    }
+
+    public function getAllCupcakes()
+    {
+        $statement = $this->pdo->query('SELECT * FROM' . static::TABLE);
+        return $statement->fetchAll(PDO::FETCH_CLASS, static::CLASSNAME);
     }
 }
